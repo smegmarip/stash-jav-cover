@@ -180,7 +180,11 @@
                                 backimg.setAttribute("alt", "BackCover");
                                 backimg.src =
                                   resp.data.movieUpdate.back_image_path;
-                                reloadImg(sourceimg.src);
+                                if (sourceimg.src.match(/^data:/)) {
+                                  window.location.reload();
+                                } else {
+                                  reloadImg(sourceimg.src);
+                                }
                                 imgContainer.appendChild(backBtn);
                                 cropping = false;
                                 cropBtn.style.display = "none";
