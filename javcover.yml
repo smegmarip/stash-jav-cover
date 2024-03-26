@@ -1,0 +1,11 @@
+name: Javlibrary Cover
+# requires: StashUserscriptLibrary
+description: Splits Javlibrary DVD Cover
+version: 0.0.1
+ui:
+  requires:
+    - StashUserscriptLibrary
+  css:
+    - javcover.css
+  javascript:
+    - javcover.js
